@@ -12,7 +12,7 @@ export default {
       );
     }
 
-    const version = url.searchParams.get("v");
+    let version = url.searchParams.get("v");
     if (version == undefined || version == "") {
       version = "1";
     }
