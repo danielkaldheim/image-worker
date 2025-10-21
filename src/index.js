@@ -50,9 +50,15 @@ export default {
       if (version == "2") {
         if (response.description != undefined && response.description != "") {
           return new Response(
-            JSON.stringify({
-              text: response.description.replace(/\s+$/, ""),
-            })
+            JSON.stringify(
+              {
+                text: response.description.replace(/\s+$/, ""),
+              },
+              {
+                status: 200,
+                headers: { "Content-Type": "application/json" },
+              }
+            )
           );
         }
       } else {
