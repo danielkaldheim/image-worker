@@ -28,7 +28,7 @@ export default {
         prompt: "Generate a caption for this image",
         max_tokens: 512,
       };
-      const response = await env.AI.run(
+      const response = await env.IMAGE_AI_BINDING.run(
         "@cf/llava-hf/llava-1.5-7b-hf",
         input
       );
